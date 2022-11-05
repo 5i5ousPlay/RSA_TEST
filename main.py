@@ -35,9 +35,9 @@ def ascii_to_char(ascii):
         #a = h
         #h = temp
 
-def rsa_keygeneration_6bit(message):
-    p = number.getPrime(6)
-    q = number.getPrime(6)
+def rsa_keygeneration_10bit(message):
+    p = number.getPrime(10)
+    q = number.getPrime(10)
     n = p*q #public key
     e = 2 #public key
     CTF = math.lcm((p-1),(q-1))
@@ -80,7 +80,7 @@ def rsa_keygeneration_6bit(message):
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     message = input()
-    rsa_keygeneration_6bit(message)
+    rsa_keygeneration_10bit(message)
     #converted = char_to_ascii(message)
     #print(converted)
 
