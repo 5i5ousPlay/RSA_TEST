@@ -52,6 +52,8 @@ def rsa_keygeneration_10bit(message):
     this program uses the Carmichael Totient Function. This will still 
     provide the correct encryption and decryption of data. Most real life
     implementations of RSA use either. 
+    
+    Carmichael, R. D. "On Euler's phi-Function." Bull. Amer. Math. Soc. 13, 241-243, 1907.
     """
     CTF = math.lcm((p-1),(q-1))
 
