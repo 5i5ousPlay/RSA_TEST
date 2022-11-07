@@ -54,7 +54,7 @@ Decrypted Data:  [72, 101, 108, 108, 111]
 Decrypted Message: Hello
 ```
 ### Exiting the Program
-To exit the program simple input `EXIT`. 
+To exit the program simply input `EXIT`. 
 ## Members
 * Conanan
 * Geraldo
