@@ -32,12 +32,10 @@ def ascii_to_char(ascii):
 def rsa_keygeneration_10bit(message):
     """
     RSA Encryption normally uses primes that are
-    around 1024-2048 bits long. However, for the sake
-    of demonstration (and to avoid overflow errors),
-    this program uses 10-bit primes.
+    around 1024-2048 bits long.
     """
-    p = number.getPrime(10)
-    q = number.getPrime(10)
+    p = number.getPrime(1024)
+    q = number.getPrime(1024)
     n = p*q
     e = 2
 
@@ -84,9 +82,9 @@ def rsa_keygeneration_10bit(message):
 
     # shows the ascii conversion of encrypted data
     # made to be unreadable
-    encrypted_ascii = ascii_to_char(encrypted_data)
-    encrypted_ascii = ''.join(encrypted_ascii)
-    print("Encrypted Ascii: ", encrypted_ascii)
+    # encrypted_ascii = ascii_to_char(encrypted_data)
+    # encrypted_ascii = ''.join(encrypted_ascii)
+    # print("Encrypted Ascii: ", encrypted_ascii)
 
     # Decryption
     decrypted_data = []
