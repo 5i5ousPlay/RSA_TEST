@@ -104,7 +104,7 @@ if __name__ == '__main__':
     while True:
         print("\n----BASIC-RSA-ALGORITHM-DEMONSTRATION----")
         print("Please input your message for encryption\nOr input 'EXIT' to stop the program")
-        message = input('Input:')
+        message = input('Input: ')
         if message == 'EXIT':
             break
         else:
