@@ -67,18 +67,18 @@ def rsa_keygeneration_10bit(message):
     d = pow(e, -1, CTF)
 
     to_convert = message
-    print("Original Message: ", to_convert)
+    print("\nOriginal Message: ", to_convert)
 
     # converts message into a list of numerical ascii values that can be encrypted using RSA
     in_ascii = char_to_ascii(to_convert)
-    print("In ascii: ", in_ascii)
+    print("\nIn ascii: ", in_ascii)
 
     # Encryption
     encrypted_data = []
     for x in in_ascii:
         c = pow(x,e,n)
         encrypted_data.append(c)
-    print("Encrypted Data: ", encrypted_data)
+    print("\nEncrypted Data: ", encrypted_data)
 
     # shows the ascii conversion of encrypted data
     # made to be unreadable
@@ -91,14 +91,14 @@ def rsa_keygeneration_10bit(message):
     for x in encrypted_data:
         m = pow(x,d,n)
         decrypted_data.append(m)
-    print("Decrypted Data: ", decrypted_data)
+    print("\nDecrypted Data: ", decrypted_data)
 
     # shows the decrypted data's numerical values
     # should be the same values as the original converted ascii letters
     # converts back to ascii and prints the original message that was encrypted
     decrypted_ascii = ascii_to_char(decrypted_data)
     decrypted_ascii = ''.join(decrypted_ascii)
-    print("Decrypted Message:" , decrypted_ascii)
+    print("\nDecrypted Message:" , decrypted_ascii)
 
 if __name__ == '__main__':
     while True:
